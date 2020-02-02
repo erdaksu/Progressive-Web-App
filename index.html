@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Medula One" rel="stylesheet" />
     <script src="data/courses.js" defer></script>
-	<script src="app.js" defer></script>
+    <script src="app.js" defer></script>
     <title>CLASSES AND ACTIVITIES</title>
 </head>
 
@@ -33,12 +33,23 @@
             </div>
             <div id="footer-links">
                 <a href=https:/www.instagram.com/classandactivities.> <img src=/img/instagram.png width="50"
-                height="50"> <a href=https:/www.twitter.com/classandactivities.> <img src=/img/twitter.png
-                width="50" height="50">
+                    height="50"> <a href=https:/www.twitter.com/classandactivities.> <img src=/img/twitter.png
+                        width="50" height="50">
             </div>
         </footer>
     </div>
     <script src="main.js" charset="utf-8"></script>
+    <script>
+        var request = new XMLHttpRequest();
+        request.open('GET', 'http://localhost:3000');
+        request.responseType = 'text';
+        request.onload = function () {
+            alert(request.response);
+        };
+        request.send();
+
+        console.log('the line of code comes after the XHR request');
+    </script>
 </body>
 
 </html>
