@@ -1,0 +1,83 @@
+body {
+    background-color: #d4efff;
+  }
+  #logo {
+    float: left;
+    width: 65px;
+    height: 65px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    float: right;
+    text-align: right;
+    padding: 10px;
+    font-size: 30px;
+  }
+  .course-url {
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+  }
+  li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+  }
+  li {
+    float: left;
+  }
+  li a:hover:not(.active) {
+    background-color: black;
+  }
+  .active {
+    background-color: #78a0b9;
+  }
+  /* - MAIN SECTIONS - */
+  header {
+    background-color: rgb(65, 65, 65);
+    font-size: 25px;
+    font-family: "Medula One";
+    color: #78a0b9;
+    padding: 10px;
+  }
+  main {
+    background-color: rgb(65, 65, 65);
+    font-size: 35px;
+    font-family: "Medula One";
+    color: white;
+    padding: 10px;
+    float: left;
+    text-align: left;
+  }
+  footer {
+    background-color: rgb(65, 65, 65);
+    padding: 10px;
+    font-family: "Medula One";
+    color: #ffffff;
+    text-align: center;
+    float: right;
+  }
+  /* - MAIN SECTIONS - */
+  
+  /* - CSS GRID - */
+  .container {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 0.2fr 3.25fr 0.2fr;
+    grid-template-columns: 3fr 1fr;
+  }
+  header {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+  main {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  footer {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
+  /* - CSS GRID END - */
