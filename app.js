@@ -1,6 +1,28 @@
+var template = "<article>\n\
+	<img src='data/img/placeholder.png' data-src='data/img/SLUG.png' alt='NAME'>\n\
+	<h3>#POS. TOPIC</h3>\n\
+	<span>Topic:</span> <strong>TOPIC</strong>\n\
+	<br>\n\
+	<span>Location:</span> <strong>LOCATION</strong>\n\
+	<br>\n\
+	<span>Price:</span> <strong>PRICE</strong>\n\
+	<br>\n\
+	<span>More:</span> <a href='http://classesandactivities/SLUG'>classesandactivities/SLUG</a>\n\
+</article>";
+var content = '';
+for(var i=0; i<courses.length; i++) {
+	var entry = template.replace(/POS/g,(i+1))
+		.replace(/SLUG/g,courses[i].slug)
+		.replace(/TOPIC/g,courses[i].topic)
+		.replace(/LOCATION/g,courses[i].location)
+		.replace(/PRICE/g,courses[i].price)
+	entry = entry.replace('<a href=\'http:///\'></a>','-');
+	content += entry;
+};
+document.getElementById('content').innerHTML = content;
 // Registering Service Worker
 if('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/progressive-web-app/sw.js');
+	navigator.serviceWorker.register('sw.js');
 };
 
 // Requesting permission for Notifications after clicking on the button

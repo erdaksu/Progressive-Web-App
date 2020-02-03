@@ -65,7 +65,7 @@ body {
   .container {
     display: grid;
     gap: 10px;
-    grid-template-rows: 0.2fr 3.25fr 0.2fr;
+    grid-template-rows: 0.05fr 3.25fr 0.05fr;
     grid-template-columns: 3fr 1fr;
   }
   header {
@@ -81,3 +81,33 @@ body {
     grid-row: 3;
   }
   /* - CSS GRID END - */
+  button {
+    background-color: rgb(65, 65, 65);
+    font-size: 35px;
+    font-family: "Medula One";
+    color:#78a0b9;
+    padding: 10px;
+    text-align: left;
+  }
+  a {
+    text-decoration: none;
+    color: #78a0b9;
+  }
+  main img {
+    float: right;
+    width: 30%;
+    min-width: 80px;
+    max-width: 160px;
+    padding-bottom: 1em;
+  }
+  article {
+    border-top: 0.1em solid #acabab;
+    padding: 1em;
+  }
+  article img[data-src] {
+    filter: blur(0.2em);
+  }
+  article img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+  }

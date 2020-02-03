@@ -5,6 +5,7 @@ var cacheName = 'pwa-v1';
 var appShellFiles = [
   '/progressive-web-app/',
   '/progressive-web-app/index.html',
+  '/progressive-web-app/courses.html',
   '/progressive-web-app/users.html',
   '/progressive-web-app/style.css',
   '/progressive-web-app/data/courses.js',
