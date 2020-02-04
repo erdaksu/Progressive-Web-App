@@ -22,7 +22,7 @@ for(var i=0; i<courses.length; i++) {
 document.getElementById('content').innerHTML = content;
 // Registering Service Worker
 if('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/progressive-web-app/sw.js');
+	navigator.serviceWorker.register('Progressive-Web-App/sw.js');
 };
 
 // Requesting permission for Notifications after clicking on the button

@@ -1,7 +1,7 @@
 self.importScripts('data/courses.js');
 
 // Files to cache
-var cacheName = 'pwa-v1';
+var cacheName = 'Progressive-Web-App-v1';
 var appShellFiles = [
   '/progressive-web-app/',
   '/progressive-web-app/index.html',

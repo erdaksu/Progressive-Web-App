@@ -4,9 +4,9 @@
     "description": "Progressive Web App For Classes and Activities",
     "icons": [
         {
-            "src": "img/logo",
+            "src": "img/logo.png",
             "sizes": "32x32",
-            "type": "img/png"
+            "type": "image/png"
         }
     ],
     "start_url": "/progressive-web-app/index.html",
