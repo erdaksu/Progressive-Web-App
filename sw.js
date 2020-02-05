@@ -32,23 +32,26 @@ self.addEventListener('install', function (e) {
     caches.open(cacheName).then(function (cache) {
       console.log('[Service Worker] Caching all: app shell and content');
       cache.addAll(cacheAssets);
-      }).then(() => self.skipWaiting())
+    }).then(() => self.skipWaiting())
+  );
+});
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches.open('Progressive-Web-App-v2').then((cache) => {
+      return cache.addAll(contentToCache);
+    })
   );
 });
 self.addEventListener('activate', (e) => {
-  console.log('[Service Worker] Activate');
   e.waitUntil(
-      caches.keys().then(cacheNames => {
-          return Promise.all(
-              cacheNames.map(cache => {
-                  if (cache !== cacheName) {
-                      console.log('[Service Worker] Old cache is deleted');
-                      return caches.delete(cache);
-                  }
-              })
-          )
-      })
-  )
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (key !== cacheName) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 self.addEventListener('push', function (event) {
   var jsonData = JSON.parse(event.data.text());
