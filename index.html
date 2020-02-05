@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="end3r">
-	<meta name="theme-color" content="#B12A34">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B12A34">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Medula One" rel="stylesheet" />
@@ -27,7 +27,21 @@
         </header>
         <main>
             <button id="notifications">REQUEST NOTIFICATIONS</button>
-            <section id="content"></section>
+            <section id="content">
+                <article v-for="course in courses">
+                    <img :src="'data/img/'+course.slug+'.png'" :alt="course.name">
+                    <h3>{{course.topic}}</h3>
+                        <span>Topic: <strong>{{course.topic}}</strong></span>
+                        <br>
+                        <span>Location: <strong>{{course.location}}</strong></span>
+                        <br>
+                        <span>Price: <strong>{{course.price}}</strong></span>
+                        <br>
+                        <span>More: <a :href="'http:////classesandactivities.com/' + course.slug">
+                            classesandactivities/{{course.slug}}</a></span>
+                    </ul>
+                </article>
+            </section>
         </main>
         <footer>
             <div class="footer-text">
