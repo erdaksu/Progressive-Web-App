@@ -36,8 +36,8 @@
             
             <section id="content">
                 <article v-for="course in courses">
-                   <!-- <img :src="'data/img/'+course.slug+'.png'" :alt="course.name"> -->
-                    <img src='data/img/placeholder.png' data-src="'data/img/' + course.slug'.png'" alt='NAME'>
+                   <img :src="'data/img/'+course.slug+'.png'" :alt="course.name">
+                    <!--<img src='data/img/placeholder.png' data-src="'data/img/' + course.slug'.png'" alt='NAME'> -->
                     <h3>{{course.topic}}</h3>
                         <span>Topic: <strong>{{course.topic}}</strong></span>
                         <br>
