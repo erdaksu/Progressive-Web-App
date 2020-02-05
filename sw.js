@@ -31,9 +31,29 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
       console.log('[Service Worker] Caching all: app shell and content');
-      return cache.addAll(contentToCache);
-    })
+      cache.addAll(cacheAssets);
+      }).then(() => self.skipWaiting())
   );
+});
+self.addEventListener('activate', (e) => {
+  console.log('[Service Worker] Activate');
+  e.waitUntil(
+      caches.keys().then(cacheNames => {
+          return Promise.all(
+              cacheNames.map(cache => {
+                  if (cache !== cacheName) {
+                      console.log('[Service Worker] Old cache is deleted');
+                      return caches.delete(cache);
+                  }
+              })
+          )
+      })
+  )
+});
+self.addEventListener('push', function (event) {
+  var jsonData = JSON.parse(event.data.text());
+  const title = 'ClassesAndActivities';
+  event.waitUntil(self.registration.showNotification(title, jsonData));
 });
 
 // Fetching content using Service Worker
@@ -51,3 +71,5 @@ self.addEventListener('fetch', function (e) {
     })
   );
 });
+
+
