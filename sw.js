@@ -3,21 +3,20 @@ self.importScripts('data/courses.js');
 // Files to cache
 var cacheName = 'Progressive-Web-App-v1';
 var appShellFiles = [
-  '/Progressive-Web-App/',
-  '/Progressive-Web-App/index.html',
-  '/Progressive-Web-App/courses.html',
-  '/Progressive-Web-App/users.html',
-  '/Progressive-Web-App/style.css',
-  '/Progressive-Web-App/data/courses.js',
-  '/Progressive-Web-App/img/logo.png',
-  '/Progressive-Web-App/icons/icon-32.png',
-  '/Progressive-Web-App/icons/icon-64.png',
-  '/Progressive-Web-App/icons/icon-96.png',
-  '/Progressive-Web-App/icons/icon-128.png',
-  '/Progressive-Web-App/icons/icon-168.png',
-  '/Progressive-Web-App/icons/icon-192.png',
-  '/Progressive-Web-App/icons/icon-256.png',
-  '/Progressive-Web-App/icons/icon-512.png'
+  'index.html',
+  'courses.html',
+  'users.html',
+  'style.css',
+  'data/courses.js',
+  'img/logo.png',
+  'icons/icon-32.png',
+  'icons/icon-64.png',
+  'icons/icon-96.png',
+  'icons/icon-128.png',
+  'icons/icon-168.png',
+  'icons/icon-192.png',
+  'icons/icon-256.png',
+  'icons/icon-512.png'
 ];
 var coursesImages = [];
 for (var i = 0; i < courses.length; i++) {
