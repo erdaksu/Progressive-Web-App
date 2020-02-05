@@ -20,6 +20,7 @@ const vueapp = new Vue({
 			{ slug: 'sportsgoldersgreen', topic: 'Sports Classes', location: 'GoldersGreen', price: '£50', },]
 	}
 })
+
 // Registering Service Worker
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('sw.js');
