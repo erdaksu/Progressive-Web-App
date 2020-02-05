@@ -23,7 +23,7 @@ const vueapp = new Vue({
 
 // Registering Service Worker
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('sw.js');
+	navigator.serviceWorker.register('/Progressive-Web-App/sw.js');
 };
 
 // Requesting permission for Notifications after clicking on the button

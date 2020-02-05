@@ -1,4 +1,4 @@
-self.importScripts('data/courses.js');
+self.importScripts('/data/courses.js');
 
 // Files to cache
 var cacheName = 'Progressive-Web-App-v1';
