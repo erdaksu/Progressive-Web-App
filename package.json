@@ -1,0 +1,28 @@
+{
+  "name": "progressive-web-app",
+  "version": "1.0.0",
+  "description": "https://github.com/erdaksu/Progressive-Web-App\r https://erdaksu.github.io/Progressive-Web-App/",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "module-name": "^0.0.1-security",
+    "mongodb": "^3.5.2",
+    "node": "^13.7.0",
+    "nodemon": "^2.0.2",
+    "superagent": "^5.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdaksu/Progressive-Web-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erdaksu/Progressive-Web-App/issues"
+  },
+  "homepage": "https://github.com/erdaksu/Progressive-Web-App#readme"
+}
