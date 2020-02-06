@@ -4,15 +4,16 @@
   "description": "https://github.com/erdaksu/Progressive-Web-App\r https://erdaksu.github.io/Progressive-Web-App/",
   "main": "app.js",
   "dependencies": {
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "module-name": "^0.0.1-security",
     "mongodb": "^3.5.2",
     "node": "^13.7.0",
-    "nodemon": "^2.0.2",
     "superagent": "^5.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  },
   "scripts": {
     "start": "node server.js"
   },
